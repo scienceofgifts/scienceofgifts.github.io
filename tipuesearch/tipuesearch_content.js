@@ -1,6 +1,6 @@
 
 var tipuesearch = {"pages": [
-     {"title": "27 Inexpensive Yet Charming Christmas Gifts for Coworkers", "text": "", "tags": "Coworkers", "url": "http://www.scienceofgifts.com/blog/inexpensive-coworker-christmas-gifts.html"},
+     {"title": "27 Inexpensive Yet Charming Christmas Gifts for Coworkers", "text": "", "tags": "", "url": "http://www.scienceofgifts.com/blog/inexpensive-coworker-christmas-gifts.html"},
      {"title": "Tipue Search, a site search engine jQuery plugin", "text": "Tipue Search is a site search engine jQuery plugin. It's free, open source, responsive and fast. Tipue Search only needs a browser that supports jQuery. It doesn't need MySQL or similar. In Static mode it doesn't even need a web server.", "tags": "JavaScript", "url": "http://www.tipue.com/search"},
      {"title": "Tipue Search Documentation", "text": "Tipue Search is a site search engine jQuery plugin. It's free, open source and responsive. Tipue Search uses various modes for loading content. Static mode uses a JavaScript object, while JSON mode uses JSON. Live mode grabs content from a list of pages dynamically.", "tags": "docs", "url": "http://www.tipue.com/search/docs"},     
      {"title": "Tipue Search Static mode demo", "text": "Tipue Search is a site search engine jQuery plugin. This is a demo of Static mode. Enter tipue into the search box above.", "tags": "", "url": "http://www.tipue.com/search/demos/static"},
