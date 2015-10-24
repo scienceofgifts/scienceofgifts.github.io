@@ -144,13 +144,10 @@ p{
 }
 
 .nav-menu{
-  background-color: black;
-  color: white;
-  font: normal 17px/20px 'Satisfy', serif; 
-  text-align: right;
-    float:left;
-    position:relative;
-    width: 100%;
+	background-color: #232F3E;
+	color: white;
+	font: bold italic 13px/20px sans;
+	text-align: right;
 }
 
 .nav-menu li{
@@ -180,6 +177,8 @@ p{
 
 
 }
+
+
 
 
 .blog-title{
