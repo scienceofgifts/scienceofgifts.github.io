@@ -146,7 +146,7 @@ p{
 .nav-menu{
 	background-color: #232F3E;
 	color: white;
-	font: bold italic 13px/20px sans;
+	font: bold italic 13px/20px Verdana, Geneva, sans-serif;
 	text-align: right;
 }
 
@@ -187,7 +187,7 @@ p{
 }
 
 .blog-title{
- font: normal 30px/23px 'Bangers', cursive;
+ font: normal 30px/23px Verdana, Geneva, sans-serif;
  margin: 5px;
  padding: 10px;
 }
@@ -498,7 +498,8 @@ background-image: url(http://1.bp.blogspot.com/-UaMXnN5fKLg/VUscmmNqX3I/AAAAAAAA
 
 @media screen and (max-width : 480px) {
 /* CSS FOR MOBILES ------------*/
-.content{
+.nav{
+	font-size: 16px;
 
 
 }
