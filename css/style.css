@@ -500,8 +500,10 @@ background-image: url(http://1.bp.blogspot.com/-UaMXnN5fKLg/VUscmmNqX3I/AAAAAAAA
 /* CSS FOR MOBILES ------------*/
 .nav{
 	font-size: 16px;
+}
 
-
+.nav li{
+	margin: 5px;
 }
 
 }
