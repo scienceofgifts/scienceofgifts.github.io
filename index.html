@@ -1,41 +1,23 @@
-   <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<link rel="stylesheet" href="css/style.css">
-    <title>Science of Gifts</title>
-     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-<meta name="description" content="You know how Santa selects gifts? Science. 'Cause that's how we roll. Find unique, lovable gifts for every occasion. ">     
-  </head>
+---
+layout: default
+---
 
 
+<div class="home">
 
-<body>
-    <div class="wrap">
+  <h1 class="page-heading">Posts</h1></h1>
 
-<div class="nav-menu">
-      <a href="#" >   
-      <div class='blog-title'>
-      <img src="https://cloud.githubusercontent.com/assets/12511268/10710115/6fdea55c-7a67-11e5-93ff-4c7f34936f30.jpeg" alt="ScienceofGifts"></a> 
-       </div>
-      <ul>
-        <li><a href="http://www.scienceofgifts.com" class="nav-one">Home</a></li>
-        <li><a href="http://www.scienceofgifts.com/blog" class="nav-one">Blog</a></li>
-        <li><a href="http://www.scienceofgifts.com/about.html" class="nav-one">About</a></li>
-        <li><a href="http://www.scienceofgifts.com/contact.html" class="nav-one">Contact</a></li>
-      </ul>
-    </div>
-    
-<div class="page">
-   
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
 
-    <footer>
-       <br/>
-    </footer>
 </div>
-
-  </div>
-</body>
-</html>

@@ -1,0 +1,671 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+
+
+
+body{
+
+	font: 13px/21px Verdana, Geneva, sans-serif;
+	width: 100%;
+      background-color: #f1f1f1;
+}
+
+a{
+      text-decoration: none;
+    color: #1A17C6;
+}
+
+body a{
+      text-decoration: none;
+    color: #1A17C6;
+}
+
+
+body a:visited{
+  color: #8A069A;
+
+
+}
+
+
+body a:hover {
+   color: #1A17C6;
+   text-decoration:underline;
+}
+
+
+h1{
+	font: 25px/ 40px Impact, Charcoal, sans-serif;
+	margin-bottom: 20px;
+	padding: 0px;
+	color: black;
+
+}
+
+
+
+.heading h1{
+	text-align: center;
+	font: normal 37px/46px Impact, Charcoal, sans-serif;
+}
+
+h2{
+	font: 22px/ 25px Impact, Charcoal, sans-serif;
+	margin-bottom: 15px;
+	padding: 0px;
+	color: #222222;
+
+}
+
+
+.post-content h2{
+	font:  22px/ 25px Impact, Charcoal, sans-serif;
+	margin-bottom: 15px;
+	color: #222222;
+}
+
+
+
+
+.wrap{
+	max-width: 960px;
+	margin: auto;
+	background-color: #f1f1f1;
+	border-bottom: 0px solid white;
+        float: center;
+
+}
+
+
+.page {
+		padding: 0px;
+}
+
+
+
+.post-body{
+	padding: 15px 15px 0px 15px;
+
+}
+
+.post{
+  padding: 35px 35px 0px 35px;
+  max-width: 500px;
+    float:left;
+    background-color: white;
+    width: 60%;
+}
+
+.post-footer{
+  background-color: white;
+  clear:both;
+    width: 500px;
+      padding: 35px 35px 10px 35px;
+}
+
+.post-list{
+  width: 600px;
+}
+
+
+.site-sidebar{
+  width: 30%;
+  float:left;
+  font-size: 13px;
+  margin: 0px 5px 15px 15px;
+  padding: 15px;
+  font-weight: bold;
+  background-color:white;
+}
+
+.site-sidebar img{
+  float:left;
+
+}
+
+.site-sidebar h2{
+    background-color: #f2f2f2;
+  color: #111;
+  padding: 10px 0px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.site-sidebar a{
+  color: #111;
+  float: left;
+    width:100%;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.text{
+  width: 50%;
+}
+
+.site-sidebar a:visited{
+  color: #111;
+}
+
+.site-sidebar a:hover{
+  color: #000;
+    text-decoration: underline;
+}
+
+.site-sidebar ul{
+    list-style-type: none;
+}
+
+.site-sidebar li{
+    margin: 0px 5px 20px 5px;
+    float:left;
+}
+
+.site-sidebar img:hover{
+  opacity: 60%;
+}
+
+
+.amazon{
+ width: 100%;
+float:left;
+}
+
+.popular{
+  width: 100%;
+  float:left;
+}
+
+p{
+  margin: 15px 5px 15px 5px;
+ 
+}
+
+
+img{
+	padding: 4px;
+	margin-right: 15px;
+	border: 0px solid #e6e6e6;
+	float:left;
+}
+
+img:first-child{
+}
+
+.nav{
+	background-color: #232F3E;
+	color: white;
+	font:bold italic 13px/20px Verdana, Geneva, sans-serif;
+		text-align: right;
+    margin-bottom: 5%;
+
+}
+
+.nav li{
+	display: inline;
+	margin: 10px;
+
+}
+
+.nav ul{
+		padding: 10px 20px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.nav a{
+	color: white;
+	text-decoration: none;
+}
+
+.nav a:visited{
+  color: white;
+
+}
+
+
+.nav a:hover{
+  color: white;
+  text-decoration: none;
+
+}
+
+
+.post-meta{
+  font: bold 14px/ 20px Georgia, serif;
+  color: #232F3E;
+}
+
+.post-link{
+	font: normal 35px/45px Impact, Charcoal, sans-serif;
+}
+
+.post-title {
+		font: normal 35px/45px Impact, Charcoal, sans-serif;
+    color: #333;
+}
+
+.post-list{
+  max-width: 100%;
+}
+
+.share{
+    float:left;
+    width: 100%;
+    list-style:none;
+    display:inline;
+}
+
+.share ul{
+    float:left;
+    padding: 5px 0px;
+}
+
+.share li{
+  float:left;
+    display: inline;
+  margin: 5px;
+  width: 40%;
+    margin-left: -80px;
+}
+
+.share li:first-child{
+  margin-left:0px;
+}
+
+
+/* Underline From Center */
+.nav-one{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.nav-one:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: white;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.nav-one:hover:before, .nav-one:focus:before, .nav-one:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+.blog-title{
+ font: normal 30px/23px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+   color: white;
+   padding-bottom: 7px;
+}
+
+.blog-title a{
+  color: white;
+  text-decoration: none;
+}
+
+.blog-title a:hover{
+  text-decoration:none;
+    color: white;
+}
+
+
+.home{
+padding: 20px;
+background-color: white;
+}
+
+.foot{
+  border-top: 2px solid #e2e2e2;
+  margin: 20px 0;
+  padding: 20px 0 0 0;
+  font-size: 14px;
+
+}
+
+.site-footer  {
+  clear: both;
+  padding: 0px;
+}
+
+#disqus_thread{
+    width: 500px;
+    margin: -20px;
+    margin-bottom: 20px;
+}
+
+
+.site-footer{
+  padding: 20px 0;
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.navbar{
+  width: 100%;
+  height: 50px;
+  background-color: #232F3E;
+}
+
+.social{
+
+  margin: 15px;
+  padding: 5px 25px;
+  position: relative;
+  margin: auto;
+  width: 60%;
+}
+
+.social li{
+
+  display: inline;
+  margin: 10px;
+  padding: 5px;
+}
+
+
+.facebook{
+  width: 45px; 
+  height:45px; 
+  display: inline-block;
+  background-image: url(http://4.bp.blogspot.com/-bvOOYWu8tAE/VUnF1pu1XYI/AAAAAAAAB2A/00EmB3mkaNI/s1600/FB.png) ;
+    background-repeat: no-repeat;
+}
+
+.twitter{
+  width: 49px; 
+  height:45px; 
+  display: inline-block;
+  background-image: url(http://4.bp.blogspot.com/-ld0H9wpdOPY/VUnF1i0YGqI/AAAAAAAAB18/xbzS701Pq7c/s1600/Twitter.png ) ;
+  background-repeat: no-repeat;
+}
+
+.pinterest{
+  width: 45px; 
+  height: 45px; 
+  display: inline-block;
+  background-image: url(http://3.bp.blogspot.com/-j0LDdlmLTpY/VUnF2ZpUg7I/AAAAAAAAB2Q/y9NF0CDBQWY/s1600/pinterest.png) ;
+  background-repeat: no-repeat;
+}
+
+.googleplus{
+  width: 45px; 
+  height:45px; 
+  display: inline-block;
+  background-image: url(http://1.bp.blogspot.com/-C3XeGkoMgKY/VUnF1uCiWhI/AAAAAAAAB2I/lRay8_C-vPc/s1600/Google_plus.png) ;
+  background-repeat: no-repeat;
+}
+
+.facebook:hover{
+background-image: url(http://3.bp.blogspot.com/-fwFuZa-aqe8/VUscm7nAoCI/AAAAAAAAB3M/FcyKo_uXK6w/s1600/FBB.png); 
+
+}
+
+.twitter:hover{
+background-image: url(http://2.bp.blogspot.com/-UjfuxljwULA/VUscmro6AeI/AAAAAAAAB3Q/QKdjsLDn9PA/s1600/Twitter.png); 
+
+}
+
+.pinterest:hover{
+background-image: url(http://4.bp.blogspot.com/-IZ1ssM4cXbI/VUscnbHDgyI/AAAAAAAAB3U/wQurUE4zAN8/s1600/pinterest.png); 
+
+}
+
+.googleplus:hover{
+background-image: url(http://1.bp.blogspot.com/-UaMXnN5fKLg/VUscmmNqX3I/AAAAAAAAB3I/Z0uBU3zPudY/s1600/Googleplus.png); 
+}
+
+
+
+
+/* Mobile
+----------------------------------------------- */
+@media screen and (max-width : 1880px) {
+/* CSS FOR NETBOOK AND DESKTOP ------------*/
+.share{
+   visibility:hidden;
+}
+}
+
+
+@media screen and (max-width : 1280px) {
+/* CSS FOR NETBOOK AND DESKTOP ------------*/
+.share{
+   visibility:hidden;
+   margin:  -20px 0;
+}
+}
+
+@media screen and (max-width : 800px) {
+/* CSS FOR TABLETS ------------*/
+
+.wrap{
+  width: 100%;
+    max-width: 100%;
+}
+
+
+.post{
+  width: 100%;
+  padding: 0px;
+}
+
+.home{
+padding: 0px;
+background-color: white;
+}
+
+#disqus_thread{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+
+
+#sthoverbuttons #sthoverbuttonsMain {
+ visibility:hidden;
+
+}
+
+#sthoverbuttons-background{
+  display:none;
+}
+
+.share{
+   visibility:visible;
+  margin: 0px;
+}
+
+.navbar{
+  width: 100%;
+  height: auto;
+}
+
+
+}
+
+
+
+@media screen and (max-width : 768px) {
+/* CSS FOR SMALL TABLETS ------------*/
+
+body{
+	font: normal 16px/27px Verdana, Geneva, sans-serif;
+}
+
+
+.wrap{
+   width: 100%;
+  background-color: #fff;
+  margin: 0%;
+}
+
+
+.post{
+  width: 100%;
+    padding: 0px;
+      max-width: 100%;
+}
+
+
+.post-body{
+  padding: 0px;
+        margin: 5%;
+}
+
+#disqus_thread{
+    width: 100%;
+}
+
+.site-sidebar{
+ width: 100%;
+ max-width:100%;
+ padding: 0px;
+ margin: 0px;
+}
+
+
+.post-footer{
+      padding:  0px;
+      width: 100%;
+      margin: 0px;
+}
+
+img{
+  padding: 0px;
+}
+
+
+.nav ul{
+    padding: 10px 0px;
+}
+
+
+}
+
+@media screen and (max-width : 640px) {
+/* CSS FOR IPHONE ------------*/
+body{
+
+	font: normal 15px/24px Verdana, Geneva, sans-serif;
+  background-color: #fff;
+}
+
+.wrap{
+      background-color: #fff;
+
+}
+
+
+.site-sidebar{
+ width: 100%;
+ max-width:100%;
+ padding: 0px;
+
+}
+
+.site-sidebar h2{
+ padding: 0px;
+ 
+}
+
+.site-sidebar li{
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+}
+
+@media screen and (max-width : 480px) {
+	
+/* CSS FOR MOBILES ------------*/
+p{
+  margin: 0px 0px 15px 0px;
+ 
+}
+
+.post{
+  padding: 0px;
+  }
+
+.nav{
+  font-size: 16px;
+}
+
+}
+
+
+@media screen and (max-width : 320px) {
+/* CSS FOR SMALL OLD MOBILES ------------*/
+}
