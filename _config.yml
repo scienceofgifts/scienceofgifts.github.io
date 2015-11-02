@@ -3,7 +3,7 @@ title: Science of Gifts
 email: dattaraj@dattarajpai.com
 description: "Use science to find the best gifts for everyone."
 #baseurl: "/blog"  # subpath of your site, e.g. /blog/
-url: "http://scienceofgifts.com" # the base hostname & protocol for your site
+url: "http://scienceofgifts.github.io" # the base hostname & protocol for your site
 twitter_username: dattarajpai
 github_username:  dattarajpai
 
