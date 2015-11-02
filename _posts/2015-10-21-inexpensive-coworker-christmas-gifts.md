@@ -7,6 +7,7 @@ published: true
 categories: 
 comments: true
 ---
+
 ![horrible_bosses](https://cloud.githubusercontent.com/assets/12511268/10633181/bfc035da-7806-11e5-934a-44f886b013d5.jpeg)
 
 
@@ -36,11 +37,7 @@ Give these to your coworkers and they'll use them in darkness and associate you 
 ![radio](https://cloud.githubusercontent.com/assets/12511268/10637494/a031c982-7823-11e5-9c9f-d552edbfdd14.jpeg)
 
 
-Those regular alarm beeps, they wake you up, but they're boring. Wouldn't you like to wake up to the sound of radio. Someone yapping something about something interesting you don't care to pay attention to but still find soothing. It makes you feel pleasant.
-
-Make your coworker's days. Gift them one of these. They are small, cute and useful.
-
-<a rel="nofollow" href="http://www.amazon.com/gp/product/B00IEYHMIM/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00IEYHMIM&linkCode=as2&tag=giftscie-20&linkId=VWJZNZ74INVUVNXT">Sony ICFC1 Alarm Clock Radio, Black</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=giftscie-20&l=as2&o=1&a=B00IEYHMIM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+Those regular alarm beeps, they wake you up, but they're boring. Wouldn't you like to wake up to the sound of radio. Someone yapping somct/B00IEYHMIM/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00IEYHMIM&linkCode=as2&tag=giftscie-20&linkId=VWJZNZ74INVUVNXT">Sony ICFC1 Alarm Clock Radio, Black</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=giftscie-20&l=as2&o=1&a=B00IEYHMIM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
 ## 25) Bluetooth Transmitter - $19.99
