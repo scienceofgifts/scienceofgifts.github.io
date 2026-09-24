@@ -20,6 +20,7 @@ GEM
     configure-s3-website (2.3.0)
       aws-sdk (~> 2)
       deep_merge (~> 1.0.0)
+    csv (3.3.6)
     deep_merge (1.0.1)
     dotenv (1.0.2)
     em-websocket (0.5.3)
@@ -101,6 +102,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  csv
   jekyll-paginate-v2
   jekyll-sitemap
   jekyll-webp
