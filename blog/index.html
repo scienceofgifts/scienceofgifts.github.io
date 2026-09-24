@@ -1,0 +1,63 @@
+---
+layout: default-page
+title: Articles
+sitemap: false
+excerpt:  Find out what makes a great gift and what psychology can tell us about good gifting. You can apply this knowledge to become a better gift giver.
+---
+ 
+
+
+<div class="wrap"> <!-- Wrap -->
+  <div class="home-wrap"> <!-- Home Wrap -->
+
+
+<div class="collection-page-title-box">
+    <h1>{{ page.title }}</h1>
+   <div class="page-description">{% if page.excerpt %}<p>{{ page. excerpt }}{% endif %}</p></div>
+</div>
+
+
+<div class="post-wrapper"><!-- Artist Wrapper -->
+<div class="post-1-title">
+ <div class="counter"> <!-- Counter -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["blog"].size <= 40 %}
+ <span class="total-items">1 - {{ site.tags["blog"].size }} of {{ site.tags["blog"].size }} results</span>
+  {% else site.tags["blog"].size > 40 %}
+  <span class="total-items">1 - 40 of {{ site.tags["blog"].size }} results</span>
+  {% endif %}
+  </div> <!-- Counter End -->
+  <h2 id="hobby">Articles</h2>
+
+</div>
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags", "blog" %}
+{% for post in sorted-posts limit: 40 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 90 }}</p>
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Artist Wrapper End -->
+
+
+<style>
+	
+</style>

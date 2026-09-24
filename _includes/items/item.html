@@ -1,0 +1,130 @@
+{% assign i = include.index %}
+
+{% assign key_headline = "item" | append: i | append: "-headline" %}
+{% assign key_product = "item" | append: i | append: "-product" %}
+{% assign product = page[key_product] %}
+{% assign key_link = "item" | append: i | append: "-link" %}
+{% assign key_source = "item" | append: i | append: "-source" %}
+{% assign key_buy_text = "item" | append: i | append: "-buy-text" %}
+{% assign key_img = "item" | append: i | append: "-img" %}
+{% assign key_img_alt = "item" | append: i | append: "-img-alt" %}
+{% assign key_description = "item" | append: i | append: "-description" %}
+
+{% assign headline = page[key_headline] %}
+{% assign link = page[key_link] %}
+{% assign source = page[key_source] %}
+{% assign buy_text = page[key_buy_text] %}
+{% assign img = page[key_img] %}
+{% assign img_alt = page[key_img_alt] %}
+{% assign description = page[key_description] %}
+
+{% assign key_gg = "item" | append: i | append: "-gg" %}
+{% assign key_ideal = "item" | append: i | append: "-ideal" %}
+{% assign key_so = "item" | append: i | append: "-so" %}
+{% assign key_tc = "item" | append: i | append: "-tc" %}
+
+{% assign gg = page[key_gg] %}
+{% assign ideal = page[key_ideal] %}
+{% assign so = page[key_so] %}
+{% assign tc = page[key_tc] %}
+
+<section class="gift-item" id="item{{ i }}">
+  <h2 class="gi-heading">
+    {{ headline }}
+  </h2>
+
+  {% assign final_link = link %}
+{% if source == "amazon" %}
+  {% capture final_link %}{{ link }}{% include amazon.html %}{% endcapture %}
+{% endif %}
+
+{% assign rel_attr = "" %}
+{% if source == "amazon" %}
+  {% assign rel_attr = "nofollow sponsored" %}
+{% elsif source != "scienceofgifts" %}
+  {% assign rel_attr = "nofollow" %}
+{% endif %}
+
+<a href="{{ final_link }}"
+   class="gi-card"
+   {% if rel_attr != "" %}rel="{{ rel_attr }}"{% endif %}>
+
+  <div class="gi-wrap">
+    <div class="gi-image">
+      <picture>
+        <source srcset="/assets/{{ img }}.webp" type="image/webp">
+        <source srcset="/assets/{{ img }}.jpg" type="image/jpeg">
+        <img src="/assets/{{ img }}.jpg" alt="{{ img_alt }}" loading="lazy">
+      </picture>
+    </div>
+
+    <div class="gi-content">
+      <div class="gi-title">
+        {{ product }}
+      </div>
+
+      {% if buy_text %}
+      <div class="gi-price">
+        {{ buy_text | split: "|" | last | strip }}
+      </div>
+      {% endif %}
+
+      <div class="gi-divider"></div>
+      <p class="gi-desc">
+        {{ description }}
+      </p>
+
+      <div class="gi-btn">
+        {% include buy-button-text.html -%}
+        {% if buy_text %}
+          {{ buy_text | capitalize }}
+        {% else %}
+          {{ source | capitalize }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</a>
+</section>
+
+{% if gg %}
+<div class="gi-specs">
+
+  {% if gg != false %}
+  <div class="gi-spec-row">
+    <div class="gi-spec-label">Why it makes a great gift</div>
+    <div class="gi-spec-value">
+      {{ gg }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if ideal %}
+  <div class="gi-spec-row">
+    <div class="gi-spec-label">Ideal for</div>
+    <div class="gi-spec-value">
+      {{ ideal }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if so and so != false %}
+  <div class="gi-spec-row">
+    <div class="gi-spec-label">What makes it stand out</div>
+    <div class="gi-spec-value">
+      {{ so }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if tc and tc != false %}
+  <div class="gi-spec-row subtle">
+    <div class="gi-spec-label">Things to consider</div>
+    <div class="gi-spec-value">
+      {{ tc }}
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+{% endif %}

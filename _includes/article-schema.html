@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page. excerpt }}",
+
+  "author": {
+    "@type": "Person",
+    "name": "Dattaraj Pai",
+    "url": "{{ site.url }}/about/"
+  },
+  "datePublished": "{% if page.date-published-content %}{{ page.date-published-content }}{% elsif page.date-published %}{{ page.date-published }}{% else %}{{ page.date }}{% endif %}",
+  "dateModified":"{% if page.date-content %}{{ page.date-content }}{% elsif page.date %}{{ page.date }}{% else %}{{ page.date-published }}{% endif %}",
+  "image": "{% if page.schema-image == true %}{{ site.url }}/assets/{{ page.url | remove: '/' }}-large.jpg{% else %}{{ site.url }}/assets/{{ page.url | remove: '/' }}.jpg{% endif %}",
+  "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Science of Gifts"
+  }
+}
+</script>

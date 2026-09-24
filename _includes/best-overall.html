@@ -1,0 +1,88 @@
+{% assign i = page.best-overall | default: 1 %}
+{% if page.best-overall == false %}
+  {% assign i = 1 %}
+{% endif %}
+
+{% assign key_link = "item" | append: i | append: "-link" %}
+{% assign key_source = "item" | append: i | append: "-source" %}
+{% assign key_buy = "item" | append: i | append: "-buy-text" %}
+{% assign key_img = "item" | append: i | append: "-img" %}
+{% assign key_alt = "item" | append: i | append: "-img-alt" %}
+
+{%- comment -%} Fallback to item1 if missing {%- endcomment -%}
+{% assign fallback_link = page["item1-link"] %}
+{% assign fallback_source = page["item1-source"] %}
+{% assign fallback_buy = page["item1-buy-text"] %}
+{% assign fallback_img = page["item1-img"] %}
+{% assign fallback_alt = page["item1-img-alt"] %}
+
+{% assign link = page[key_link] | default: fallback_link %}
+{% assign source = page[key_source] | default: fallback_source %}
+
+{% assign buy_text = page[key_buy] %}
+{% if buy_text == nil %}
+  {% assign buy_text = fallback_buy %}
+{% endif %}
+
+{% assign img = page[key_img] | default: fallback_img %}
+{% assign img_alt = page[key_alt] | default: fallback_alt %}
+
+{% assign copy = page.featured-item-copy %}
+
+{%- comment -%} Image selection logic {%- endcomment -%}
+{% assign use_featured = page.featured-image %}
+
+{% if use_featured %}
+  {% assign final_img = img | append: "-featured" %}
+{% else %}
+  {% assign final_img = img %}
+{% endif %}
+
+<section class="featured-pick">
+
+  <div class="fp-badge" id="B1">Editor’s Pick</div>
+
+  <h2 class="fp-title">
+    <span class="fp-rank">#1</span>
+    The Best Overall
+  </h2>
+
+  <div class="fp-content">
+
+    <picture class="fp-image">
+      <source srcset="/assets/{{ final_img }}.webp" type="image/webp">
+      <source srcset="/assets/{{ final_img }}.jpg" type="image/jpeg">
+      <img src="/assets/{{ final_img }}.jpg" alt="{{ img_alt }}" loading="lazy">
+    </picture>
+
+    <div class="fp-text">
+
+      {% if copy %}
+        <p>{{ copy }}</p>
+      {% endif %}
+
+      {% assign final_link = link %}
+      {% if source == "amazon" %}
+        {% capture final_link %}{{ link }}{% include amazon.html %}{% endcapture %}
+      {% endif %}
+
+      {% if buy_text == false %}
+        <a rel="nofollow sponsored" href="{{ final_link }}">
+      {% else %}
+        <a href="{{ final_link }}">
+      {% endif %}
+
+        <span class="buy-button">
+          {% include buy-button-text.html -%}
+          {% if buy_text %}
+            {{ buy_text | capitalize }}
+          {% else %}
+            {{ source | capitalize }}
+          {% endif %}
+        </span>
+
+      </a>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<div class="faq-box" id="H15">
+    <span class="tip-star">
+    <img src="/assets/icons/faq.png" alt="*" width="25" height="25">
+    </span>
+    <h3>Frequently Asked Questions</h3>
+</div>
+
+<div class="faq-box-content">
+    <span class="faq">
+        {% include q1.html %}
+        {% unless page.faq-number < 2 %}
+        {% include q2.html %}{% endunless %}
+        {% unless page.faq-number < 3 %}
+        {% include q3.html %}{% endunless %}
+        {% unless page.faq-number < 4 %}
+        {% include q4.html %}{% endunless %}
+    </span>
+
+</div>
+

@@ -1,0 +1,30 @@
+    <div class="top-suggested">
+      <div class="post-3-wrapper">  <!-- Post 3 Wrapper -->
+       <h2 class="popular">POPULAR POSTS</h2>
+<!-- Post 3 -->
+  {% unless page.url == '/christmas-gifts/' %}
+  {% include popular/cool-gifts-for-men-popular.html %}
+  {% else %}
+  {% include popular/first-popular.html %}
+  {% endunless %}
+<!-- Post 3 End -->
+  <!-- Post 3 -->
+  {% unless page.url == '/gifts-for-screenwriters/' %}
+  {% include popular/screenwriter-popular.html %}
+  {% else %}
+  {% include popular/second-popular.html %}
+  {% endunless %}
+<!-- Post 3 End -->
+  <!-- Post 3 -->
+  {% unless page.url == '/how-to-choose-a-gift-they-will-use/' %}
+  {% include popular/third-popular.html %}
+  {% else %}
+  {% include popular/gift-guide-popular.html %}
+  {% endunless %}
+<!-- Post 3 End -->
+
+ </div> <!-- Post 3 Wrapper End -->
+ </div>
+ <style type="text/css">
+   .popular {width: 10%;}
+ </style>

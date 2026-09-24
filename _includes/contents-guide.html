@@ -1,0 +1,37 @@
+<div class="contents-box">
+
+  <div class="contents-header">
+    <span class="contents-icon">
+        <span class="tip-star">
+        <img src="/assets/icons/contents.png" alt="*" width="30" height="30">
+        </span>
+
+    </span>
+    <span class="contents-title">Contents</span>
+  </div>
+
+  <div class="contents-list">
+
+    {% for i in (1..15) %}
+
+      {% assign key_text = "bookmark" | append: i %}
+      {% assign key_link = "bookmark" | append: i | append: "-link" %}
+
+      {% assign text = page[key_text] %}
+      {% assign link = page[key_link] %}
+
+      {% if text and text != "" %}
+
+      <div class="content-item">
+        <span class="content-num">{{ i }}.</span>
+        <a href="{{ link }}">
+          {{ text }}
+        </a>
+      </div>
+
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+</div>

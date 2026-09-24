@@ -1,15 +1,25 @@
 <header>
    <div class="nav">
-      
-      <ul>
-      <a href="#" >
-       <div class='blog-title'>
-      <img src="https://cloud.githubusercontent.com/assets/12511268/10710115/6fdea55c-7a67-11e5-93ff-4c7f34936f30.jpeg" alt="ScienceofGifts"></a> 
+      <div class="blog-title">
+         <a href="/">
+         <img src="/assets/icons/logo.png" alt="Science of Gifts" width="190" height="40" alt="Science of Gifts">
+         <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+         <meta itemprop="name" content="Science of Gifts"></span>
+         </a>
+     </div> 
+       <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+         <meta itemprop="url" content="/assets/icons/logo.png">
         </div>
-        <li><a href="http://www.scienceofgifts.com" class="nav-one">Home</a></li>
-        <li><a href="http://www.scienceofgifts.com/blog" class="nav-one">Blog</a></li>
-        <li><a href="http://www.scienceofgifts.com/about.html" class="nav-one">About</a></li>
-        <li><a href="http://www.scienceofgifts.com/contact.html" class="nav-one">Contact</a></li>
-      </ul>
+       <div class="topnav" id="myTopnav">
+       <a href="/search/"><img src="../assets/icons/search-icon.png" alt="search" width="20" height="20"></a>
+       <a href="/contact/">CONTACT</a>
+       <a href="/about/">ABOUT</a>
+       <a href="/blog/">ARTICLES</a>
+       <a href="/collections/">COLLECTIONS</a>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+     </div>      
     </div>
+    {% include second-nav.html %}
+    {% include featured-top.html %}
 </header>
+

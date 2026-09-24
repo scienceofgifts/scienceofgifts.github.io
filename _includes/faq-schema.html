@@ -1,0 +1,26 @@
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": ["Article", "FAQPage"],
+  "headline": "{{ page.title }}",
+  "description": "{{ page. excerpt }}",
+  "author": {
+    "@type": "Person",
+    "name": "Dattaraj Pai",
+    "url": "{{ site.url }}/about/"
+  },
+  "datePublished": "{% if page.date-published-content %}{{ page.date-published-content }}{% elsif page.date-published %}{{ page.date-published }}{% else %}{{ page.date }}{% endif %}",
+  "dateModified":"{% if page.date-content %}{{ page.date-content }}{% elsif page.date %}{{ page.date }}{% else %}{{ page.date-published }}{% endif %}",
+  "image": "{{ site.url }}/assets/{{ page.url | remove:'/' }}.jpg",
+  "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+           {% if page.faq-number == 1 %}
+        {% include schema/faq-schema-q1.html %}{% elsif page.faq-number == 2 %}
+        {% include schema/faq-schema-q2.html %}{% elsif page.faq-number == 3 %}
+         {% include schema/faq-schema-q3.html %}{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Science of Gifts"
+  }
+}
+</script>

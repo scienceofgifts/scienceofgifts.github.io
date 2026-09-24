@@ -1,0 +1,205 @@
+---
+layout: default-page
+title: Gifts by Profession
+sitemap: false
+excerpt: Find a gift for your recipient based on their profession. If they are passionate about what they do, they'll appreciate your choice of gift.
+---
+ 
+
+
+<div class="wrap"> <!-- Wrap -->
+  <div class="home-wrap"> <!-- Home Wrap -->
+
+
+<div class="collection-page-title-box">
+    <h1>{{ page.title }}</h1>
+   <div class="page-description">{% if page.excerpt %}<p>{{ page. excerpt }}{% endif %}</p></div>
+</div>
+
+
+<div class="post-wrapper"><!-- Artist Wrapper -->
+<div class="post-1-title">
+ <div class="counter"> <!-- Counter -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["artist"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["artist"].size }} of {{ site.tags["artist"].size }} results</span>
+  {% else site.tags["artist"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["artist"].size }} results</span>
+  {% endif %}
+  </div> <!-- Counter End -->
+  <h2 id="hobby">For Artists</h2>
+
+</div>
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags", "artist" %}
+{% for post in sorted-posts limit: 10 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 90 }}</p>
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Artist Wrapper End -->
+
+<div class="post-wrapper"><!-- Post By Job Wrapper -->
+
+<div class="post-1-title">
+ <div class="counter"> <!-- Counter -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["job"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["job"].size }} of {{ site.tags["job"].size }} results</span>
+  {% else site.tags["job"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["job"].size }} results</span>
+  {% endif %}
+  </div> <!-- Counter End -->
+  <h2 id="media">By Trade</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","job" %}
+{% for post in sorted-posts limit: 10 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 90 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Job Wrapper End -->
+
+<div class="post-wrapper"> <!-- Post Teacher Wrapper -->
+<div class="post-1-title">
+ <div class="counter"> <!-- Counter -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["teacher"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["teacher"].size }} of {{ site.tags["teacher"].size }} results</span>
+  {% else site.tags["culture"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["teacher"].size }} results</span>
+  {% endif %}
+  </div> <!-- Counter End -->
+
+  <h2 id="culture">Teachers & Coaches</h2>
+</div>
+<ul class="post-1">
+    {% assign sorted-posts = site.posts | where: "tags","teacher" %}
+{% for post in sorted-posts limit: 6 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+    <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+    <p class="post-1-description">{{post.excerpt | truncate: 90 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div>
+
+
+
+<div class="post-wrapper"><!-- Post Sports Wrapper -->
+
+<div class="post-1-title">
+ <div class="counter"> <!-- Counter -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["sports"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["sports"].size }} of {{ site.tags["sports"].size }} results</span>
+  {% else site.tags["sports"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["music"].size }} results</span>
+  {% endif %}
+  </div> <!-- Counter End -->
+  <h2 id="music">Sports</h2>
+</div>
+
+<ul class="post-1">
+    {% assign sorted-posts = site.posts | where: "tags","sports" %}
+{% for post in sorted-posts limit: 6 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+    <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+    <p class="post-1-description">{{post.excerpt | truncate: 90 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div>
+
+
+
+
+
+
+
+    <div class="break"> <!--Break -->
+  </div> <!-- Break End -->
+
+</div> <!-- Post 3 Wrapper End --> <!-- Post 3 Wrapper End -->
+
+
+
+
+<style>
+    .gifts-by-profession-nav {border-bottom: 3px solid #eee;}
+
+</style>

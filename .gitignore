@@ -1,0 +1,26 @@
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# AWS deployment
+s3_website.yml
+
+# Logs
+*.log
+
+# Environment / credentials
+.env
+.env.*
+*.pem
+*.key
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.swp

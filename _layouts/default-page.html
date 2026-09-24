@@ -1,0 +1,24 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include default-page-head.html %}
+  <body>
+<div class="navbar">
+        {% include home-header.html %}
+</div>
+
+        {{ content }}
+ </div>
+ <div class="newsletter-wrapper"> <!-- Post 3 Wrapper -->
+<div class="newsletter-section">
+      {% include newsletter.html %}
+</div>
+</div>
+    </div>
+    {% include footer.html %}
+    <script src="/js/lazysizes.min.js" async></script>
+  </body>
+</html>

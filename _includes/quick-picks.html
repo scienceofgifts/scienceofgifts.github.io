@@ -1,0 +1,48 @@
+<div class="quick-picks" id="B2">
+  <h2 class="qp-title">Quick Picks</h2>
+
+  <ol class="qp-list">
+
+    {% for i in (1..10) %}
+
+      {% assign key_product = "item" | append: i | append: "-product" %}
+      {% assign key_buy = "item" | append: i | append: "-buy-text" %}
+      {% assign key_label = "qp" | append: i | append: "-label" %}
+
+      {% assign product = page[key_product] %}
+      {% assign buy_text = page[key_buy] %}
+      {% assign label = page[key_label] %}
+
+      {% if product %}
+
+      <li>
+        <!-- Label -->
+        <span class="qp-label">
+          {{ label }}
+        </span>
+
+        <!-- Main row -->
+        <div class="qp-main">
+          <a href="#item{{ i }}">
+            {{ product }}
+          </a>
+
+          {% if buy_text %}
+          <span class="qp-price">
+            {{ buy_text | split: "|" | last | strip }}
+          </span>
+          {% endif %}
+        </div>
+
+        <!-- Jump -->
+        <div class="qp-jump">
+          <a href="#item{{ i }}">Jump to review</a>
+        </div>
+      </li>
+
+      {% endif %}
+
+    {% endfor %}
+
+  </ol>
+</div>

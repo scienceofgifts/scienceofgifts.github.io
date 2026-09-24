@@ -1,0 +1,15 @@
+<div class="breadcrumb">
+<div class="bc">
+	       <a href="{{ site.url }}">Home</a> {{ "/" }}{% if page.catagory %}
+           <a href="{{ page.catagory.url }}">{{ page.catagory }}</a>
+           {% else %}
+           <a href="{{ page.url }}">{{ page.title }}</a>
+           {% endif %}
+</div>
+</div>
+
+<style>
+	.breadcrumb{display: none;}
+</style>
+
+

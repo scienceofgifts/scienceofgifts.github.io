@@ -1,0 +1,52 @@
+---
+layout: gift-collections-page
+title: Gifts For Animal Lovers
+sitemap: false
+excerpt: If you know their favorite animal, you can surprise them with a gift related to it. We've picked the most lovable gifts for all kinds of animal lovers.
+---
+ 
+
+<div class="relatedPosts">
+
+<div class="collection-page-title-box">
+		<span class="collection-page-title-image">
+		<img src="../assets/icons/elephant-icon.png" alt="Animal Lovers">
+	</span>
+	<h1>{{ page.title }}</h1>
+	{% if page.excerpt %}<p>{{ page. excerpt }}{% endif %}</p>
+</div>
+
+ <div class="counter">
+  	{% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["animals"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["animals"].size }} of {{ site.tags["animals"].size }} results</span>
+  {% else site.tags["animals"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["animals"].size }} results</span>
+  {% endif %}
+  </div>
+
+<ul class="list">
+	{% assign sorted-posts = site.posts | where: "tags","animals" %}
+{% for post in sorted-posts limit: 50 %}
+<li class= "product-list-item" id="product-list-{% increment counter %}" >
+<a href="{{ post.url }}">
+<span class= "product-list-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.jpg">
+</span>
+<h2>{{ post.title }}</h2>
+ 	<p class="summery">{{post.excerpt | truncate: 120 }}</p>
+ 	<span class="source">Collection</span>
+ 	<span class="button">View More</span>
+ </a>
+ </li>
+{% endfor %}
+</ul>
+ 
+</div>
+
+
+<style>
+	.animal-lover-gifts-nav {border-bottom: 3px solid #eee;}
+</style>

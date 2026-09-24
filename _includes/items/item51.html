@@ -1,0 +1,23 @@
+<br/>
+<div class="number">51.</div><h2 itemprop="headline">{{ page.item51-headline }}</h2>
+<div class="item">
+<a rel="nofollow" href="{{ page.item51-link }}{% if page.item51-source == 'amazon' %}{% include amazon.html %}{% endif %}"> 
+<span class="item-img">
+	<picture>
+     <source srcset="../assets/{{ page.item51-img }}.webp" type="image/webp" loading="lazy" width="260" height="260" alt="{{ page.item51-img-alt }}">
+     <source srcset="../assets/{{ page.item51-img }}.jpg" type="image/jpeg" loading="lazy" width="260" height="260" alt="{{ page.item51-img-alt }}"> 
+     <img src="../assets/{{ page.item51-img }}.jpg" loading="lazy" width="260" height="260" alt="{{ page.item51-img-alt }}">
+    </picture>	
+</span>
+<span class="item-click">
+<span class="item-link">
+{{ page.item51-description }} - {{ page.item51-source | capitalize }}.com 
+</span>
+<span class="price">
+</span>
+<span class="buy-button">
+	{% include buy-button-text.html -%}{% if page.item51-buy-text %}{{ page.item51-buy-text | capitalize }}{% else %}{{ page.item51-source | capitalize }}{% endif %}
+</span>
+</span>
+</a>
+</div>

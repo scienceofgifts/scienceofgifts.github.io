@@ -1,0 +1,30 @@
+<header>
+  <div class="nav">
+    
+    <div class="blog-title">
+      <a href="/">
+        <img rel="preload" as="image"  src="/assets/icons/logo.png"  alt="Science of Gifts"  width="190"   height="40" >
+      </a>
+    </div> 
+
+    <div class="topnav" id="myTopnav">
+      <a href="/search/">
+        <img src="/assets/icons/search-icon.png" alt="Search" width="20" height="20">
+      </a>
+      <a href="/contact/">CONTACT</a>
+      <a href="/about/">ABOUT</a>
+      <a href="/blog/">ARTICLES</a>
+      <a href="/collections/">COLLECTIONS</a>
+
+      <!-- FIXED: use button instead of fake link -->
+      <button class="icon" id="menu-toggle" aria-label="Open menu">
+        &#9776;
+      </button>
+    </div>
+
+  </div>
+
+  {% include second-nav.html %}
+  {% include featured-top.html %}
+</header>
+

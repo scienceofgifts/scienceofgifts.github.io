@@ -1,0 +1,142 @@
+<div class="second-nav-container">
+   <div class="second-nav" id="mySecondnav">
+<button class="icon" id="categories-toggle" aria-label="Open categories">
+  Categories &#9776;
+</button>
+   <a class ="for-men-nav" href="/gifts-for-men/">For Men</a>
+   <a class ="for-women-nav"  href="/gifts-for-women/">For Women</a>
+   <a class ="gifts-by-profession-nav" href="/gifts-by-profession/">Gifts By Profession</a>
+   <a class ="gifts-by-interests-nav" href="/gifts-by-interests/">Gifts By Interests</a>
+     <a class ="shop-nav" href="https://shop.scienceofgifts.com">Shop</a>
+  
+   
+</div> 
+</div>
+
+<style>
+.second-nav-container {
+  width: 100%;
+  border-bottom: 2px solid #f9f9f9;
+  float: left;
+  margin: auto;
+}
+
+.second-nav {
+  background-color: #fff;
+  overflow: hidden;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Links */
+.second-nav a {
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font: bold 12px/20px 'Sen', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.second-nav a:visited {
+  color: #333;
+}
+
+.second-nav a:hover {
+  background-color: #fff;
+  color: #3771c8;
+  text-decoration: none;
+}
+
+/* Button (NEW – replaces a.icon) */
+.second-nav .icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: bold 12px/20px 'Sen', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  color: #333;
+}
+
+/* Hide first item by default (desktop) */
+.second-nav > *:first-child {
+  display: none;
+}
+
+/* Tablet */
+@media screen and (max-width: 1100px) {
+  .second-nav {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+
+  /* Hide all links except first element (button) */
+  .second-nav a {
+    display: none;
+  }
+
+  /* Show toggle button */
+  .second-nav .icon {
+    float: right;
+    display: block;
+  }
+
+  /* Show first element (button) */
+  .second-nav > *:first-child {
+    display: block;
+  }
+
+  /* When active */
+  .second-nav.responsive {
+    position: relative;
+  }
+
+  .second-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .second-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menu-toggle");
+  const nav = document.getElementById("myTopnav");
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", function () {
+      nav.classList.toggle("responsive");
+    });
+  }
+
+  const catBtn = document.getElementById("categories-toggle");
+  const secondNav = document.getElementById("mySecondnav");
+
+  if (catBtn && secondNav) {
+    catBtn.addEventListener("click", function () {
+      secondNav.classList.toggle("responsive");
+    });
+  }
+
+});
+</script>

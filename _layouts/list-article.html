@@ -1,0 +1,51 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include list-article-head.html %}
+  <body>
+<span>
+  <div class="navbar">
+        {% include article-header.html %}
+</div>
+    <div class="wrap">
+      <div class="post-body">
+       <div class="post">
+  <header class="post-header">
+
+    <h1 class="post-title">{{ page.title }}</h1>
+    <span class="excerpt">
+      {% if page.display-excerpt %}{{ page.display-excerpt }}{% else %}{{ page.excerpt }}{% endif %}
+    </span>
+    
+   <div class="meta-wrap">
+      <p class="post-meta">
+      <span class="last_modified_date">Updated: {% if page.date %}{{ page.date | date: "%b %-d, %Y" }}{% else %}{{ page.date-published | date-published: "%b %-d, %Y" }}{% endif %}</span>
+      <span>
+       <span>{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} </p>
+      </span>  
+       {% include share.html %}  
+   </div> 
+  </header>
+  <span class="post-image">
+      <img src="/assets/{{ page.url | remove:'/' }}.webp" width="650" height="457" fetchpriority="high" alt="{{ page.alt-text }}">
+    </span>
+
+  <span>
+  <article class="post-content">
+    {{ content }}
+  </article>
+  </span>
+</div>
+ {% include post-footer.html %}
+      </div>
+    </div>
+    {% include footer.html %} 
+    <script src="/js/backtotop.min.js" async></script> 
+  </body>
+</html>
+
+<style type="text/css">
+  .affiliate{font-size:14px;margin: 5px;}
+</style>

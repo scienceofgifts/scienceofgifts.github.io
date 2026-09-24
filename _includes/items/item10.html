@@ -1,0 +1,33 @@
+<br/>
+<div class="number">10.</div><h2 itemprop="headline">{{ page.item10-headline }}</h2>
+<div class="item">
+{% assign link = page.item10-link %}
+{% if page.item10-source == "amazon" %}
+    {% capture link %}{{ page.item10-link }}{% include amazon.html %}{% endcapture %}
+{% endif %}
+{% if page.item10-buy-text == false %}
+    <a rel="nofollow sponsored" href="{{ link }}">
+{% else %}
+    <a href="{{ link }}">
+{% endif %}
+<span class="item-img">
+	<picture>
+     <source srcset="../assets/{{ page.item10-img }}.webp" type="image/webp" loading="lazy" width="260" height="260" alt="{{ page.item10-img-alt }}">
+     <source srcset="../assets/{{ page.item10-img }}.jpg" type="image/jpeg" loading="lazy" width="260" height="260" alt="{{ page.item10-img-alt }}"> 
+     <img src="../assets/{{ page.item10-img }}.jpg" loading="lazy" width="260" height="260" alt="{{ page.item10-img-alt }}">
+    </picture>	
+</span>
+<span class="item-click">
+<span class="item-link">
+{{ page.item10-description }} - {{ page.item10-source | capitalize }}.com 
+</span>
+<span class="price">
+</span>
+<span class="buy-button">
+	{% include buy-button-text.html -%}{% if page.item10-buy-text %}{{ page.item10-buy-text | capitalize }}{% else %}{{ page.item10-source | capitalize }}{% endif %}
+</span>
+</span>
+</a>
+</div>
+
+{% if page.item10-gg %}{% include dd/dd-10.html %}{% endif %}

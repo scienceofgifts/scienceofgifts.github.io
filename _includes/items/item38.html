@@ -1,0 +1,31 @@
+<br/>
+<div class="number">38.</div><h2 itemprop="headline">{{ page.item38-headline }}</h2>
+<div class="item">
+{% assign link = page.item38-link %}
+{% if page.item38-source == "amazon" %}
+    {% capture link %}{{ page.item38-link }}{% include amazon.html %}{% endcapture %}
+{% endif %}
+{% if page.item38-buy-text == false %}
+    <a rel="nofollow sponsored" href="{{ link }}">
+{% else %}
+    <a href="{{ link }}">
+{% endif %}
+<span class="item-img">
+	<picture>
+     <source srcset="../assets/{{ page.item38-img }}.webp" type="image/webp" loading="lazy" width="260" height="260" alt="{{ page.item38-img-alt }}">
+     <source srcset="../assets/{{ page.item38-img }}.jpg" type="image/jpeg" loading="lazy" width="260" height="260" alt="{{ page.item38-img-alt }}"> 
+     <img src="../assets/{{ page.item38-img }}.jpg" loading="lazy" width="260" height="260" alt="{{ page.item38-img-alt }}">
+    </picture>	
+</span>
+<span class="item-click">
+<span class="item-link">
+{{ page.item38-description }} - {{ page.item38-source | capitalize }}.com 
+</span>
+<span class="price">
+</span>
+<span class="buy-button">
+	{% include buy-button-text.html -%}{% if page.item38-buy-text %}{{ page.item38-buy-text | capitalize }}{% else %}{{ page.item38-source | capitalize }}{% endif %}
+</span>
+</span>
+</a>
+</div>

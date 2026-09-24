@@ -1,0 +1,19 @@
+
+<div class="suggestedPost">
+
+
+<h4 class="suggested">Suggested</h4>
+<div class="suggested-list">
+  {% assign sorted-posts = site.posts | where: "tags","suggested" %}
+{% for post in sorted-posts limit: 50 %}
+<a href="{{ site.url }}{{ post.url }}">
+<img width="20%" src="{{ site.url }}/assets/{{ post.url | remove:'/' }}-thumb.jpg">
+<h2>{{ post.title }}</h2></a>
+ <p>{{post.excerpt | truncate: 110 }}</p>
+ <br>
+{% endfor %}
+</div>
+
+ 
+ </div>
+ 

@@ -1,0 +1,53 @@
+---
+layout: gift-collections-page
+title: "Gifts For Women"
+search-title: "Cool Gift Ideas for Women"
+sitemap: false
+excerpt: A collection of gifts for women. You'll find all kinds of excellent recommendations of good quality products picked from trusted websites. Choose something they'll love.
+---
+ 
+
+<div class="relatedPosts">
+<div class="collection-page-title-box">
+	<span class="collection-page-title-image">
+		<img src="../assets/icons/women-icon.png" alt="Women">
+	</span>
+	<h1>{{ page.title }}</h1>
+	{% if page.excerpt %}<p>{{ page. excerpt }}{% endif %}</p>
+</div>
+ <div class="counter">
+  	{% capture site_tags %}{% for tag in site.tags %}{{ tag[1].size }}#{{ tag | first | downcase }}#{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_hashes = site_tags | split:',' | sort %}
+ 
+ {% if site.tags["womens"].size <= 20 %}
+ <span class="total-items">1 - {{ site.tags["womens"].size }} of {{ site.tags["womens"].size }} results</span>
+  {% else site.tags["womens"].size > 20 %}
+  <span class="total-items">1 - 20 of {{ site.tags["womens"].size }} results</span>
+  {% endif %}
+  </div>
+
+<ul class="list">
+	{% assign sorted-posts = site.posts | where: "tags","womens" %}
+{% for post in sorted-posts limit: 50 %}
+<li class= "product-list-item">
+<a href="{{ post.url }}">
+<span class= "product-list-image">
+<img data-src="/assets/products/{{ post.img }}-thumb.jpg" class="lazyload" alt="{{ post.alt-text }}">
+</span>
+<h2>{{ post.title }}</h2>
+ 	<p class="summery">{{post.excerpt | truncate: 130 }}</p>
+ 	<span class="source">Price: {% if post.product-price %}{{ post.product-price }}{% else %} N/A
+ {% endif %}</span>
+ 	<span class="button">View More</span>
+ </a>
+ </li>
+{% endfor %}
+</ul>
+
+ 
+</div>
+
+<style>
+	.product-list-item h2{height:50px;width:94%;margin:2% 3%;}
+	.for-women-nav {border-bottom: 3px solid #eee}
+</style>

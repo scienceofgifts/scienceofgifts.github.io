@@ -1,0 +1,38 @@
+---
+layout: search
+title: Search
+sitemap: false
+newsletter: false
+---
+
+<div class="sign-up-form">
+<div class="sign-up">
+<h2>What are you looking for?</h2>
+<form action="/search/" method="get">
+  <label for="search-box"></label>
+  <input class="email-form" type="text" id="search-box" name="query">
+  <input class="subscribe" type="submit" value="search">
+</form>
+</div>
+</div>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "tags": "{{ post.tags | xml_escape }}",
+        "excerpt": {{ post.excerpt | strip_html | strip_newlines| truncate: 150 | jsonify}},
+        "url": "{{ post.url | xml_escape }}",
+        "image": "{{ post.url | slugify }}/assets/products/{{ post.img | xml_escape }}",
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+

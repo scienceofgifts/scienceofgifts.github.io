@@ -2,22 +2,449 @@
 layout: default
 ---
 
+<!-- Banner -->
+<div class="bg-img">
+  <div class="title-home">
+  	<h2>The Smart Way to Gift.</h2>
+  </div>
+  <div class="title-home-link">
+  	<a href="/collections/">View Gift Guides</a>
+  </div> 
+</div>
+<!-- Banner End -->
 
-<div class="home">
+<div class="wrap"> <!-- Wrap -->
+  <div class="home-wrap"> <!-- Home Wrap -->
 
-  <h1 class="page-heading">Posts</h1></h1>
+<!-- Slogan Part -->
+<div class="slogan">
+  <h1 class="learn-gift-giving">Learn the Art & Science of Giving Perfect Gifts</h1>
+  <div class="view-guides">
+    <a href="/blog/">
+      <span class="guide-button">View Articles</span>
+    </a>
+  </div>
+</div>
+<!-- Slogan Part End -->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="post-wrapper"> <!-- Post Wrapper -->
 
+<div class="post-1-title">
+  <h2>Recent Gift Guides</h2>
+</div>
+
+
+<ul class="post-1">
+	{% assign sorted-posts = site.posts | where: "tags","collections" %}
+{% for post in sorted-posts limit: 3 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+	<span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+ 	<p class="post-1-description">{{post.excerpt | truncate: 80 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
 
 </div>
+
+
+
+<div class="post-wrapper"><!-- Post Wrapper -->
+
+<div class="post-1-title">
+  <h2>Recent Articles</h2>
+</div>
+
+
+<ul class="post-1">
+	{% assign sorted-posts = site.posts | where: "tags","blog" %}
+{% for post in sorted-posts limit: 15 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-thumb.webp" loading="lazy" width="327" height="215" class="lazyload" alt="{{ post.alt-text }}">
+</span>
+<h2>{{ post.title }}</h2>
+ 	<p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div>
+
+
+<div class="post-products-wrapper">  
+
+ <!-- Post 2 Wrapper End -->
+
+
+<div class="post-wrapper"><!-- Post Animal Lover Wrapper -->
+
+<div class="post-1-title">
+  <h2>Animal Lover Gifts</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","animals" %}
+{% for post in sorted-posts limit: 6 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Animal Lover Wrapper End -->
+
+
+
+<div class="post-wrapper"><!-- Post Artists Wrapper -->
+
+<div class="post-1-title">
+  <h2>Gifts for Artists</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","artist" %}
+{% for post in sorted-posts limit: 6 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Artists Wrapper End -->
+
+<div class="post-wrapper"><!-- Post Culture Wrapper -->
+
+<div class="post-1-title">
+  <h2>Culture Related</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","culture" %}
+{% for post in sorted-posts limit: 3 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Culture Wrapper End -->
+
+<div class="post-wrapper"><!-- Post Music Wrapper -->
+
+<div class="post-1-title">
+  <h2>Gifts for Music Lovers</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","music" %}
+{% for post in sorted-posts limit: 3 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Music Wrapper End -->
+
+
+<div class="post-wrapper"><!-- Post Pop Culture Wrapper -->
+
+<div class="post-1-title">
+  <h2>Pop Culture Gifts</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","pop culture" %}
+{% for post in sorted-posts limit: 6 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post Pop Culture Wrapper End -->
+
+<div class="post-wrapper"><!-- Post History Wrapper -->
+
+<div class="post-1-title">
+  <h2>History Gifts</h2>
+</div>
+
+
+<ul class="post-1">
+  {% assign sorted-posts = site.posts | where: "tags","history" %}
+{% for post in sorted-posts limit: 3 %}
+<li class= "post-1-item" id="product-list-{% increment counter %}" >
+<span class="post-1-link">
+<a href="{{ post.url }}">
+<span class= "post-1-image">
+<img src="/assets/{{ post.url | remove:'/' }}-gallery.webp" loading="lazy" width="327" height="220" alt="{{ post.alt-text }}">
+</span>
+{% if post.number %}
+<span class="post-1-heading">
+  <span class="post-1-number">{{ post.number }}</span><h3>{{ post.home-title }}</h3>
+</span>
+{% else %}
+<h2>{{ post.title }}</h2>
+{% endif %}
+  <p class="post-1-description">{{post.excerpt | truncate: 100 }}</p>
+
+ </a>
+ </span>
+ </li>
+{% endfor %}
+</ul>
+
+</div> <!-- Post History Wrapper End -->
+
+
+
+
+<div class="post-3-wrapper">  <!-- Post 3 Wrapper -->
+<div class="post-1-title">
+  <h2>More Collections</h2>
+</div>
+    <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/cool-gifts-for-men/">
+      <img src="/assets/cool-gifts-for-men-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Men">
+    </div>
+    <div class="post-3-link">
+        <span class="number">34</span><h2>Coolest Gifts For Men They Actually Want</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+      <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/beatles-gifts/">
+      <img src="/assets/beatles-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Beatles Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">25</span><h2>Rocking Gifts for Beatles Fans</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+            <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="filmbuff-gifts/">
+      <img src="/assets/filmbuff-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Film buffs">
+    </div>
+    <div class="post-3-link">
+        <span class="number">24</span><h2>Cinematic Gifts For Movie Buffs</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+
+          <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="gifts-for-history-buffs/">
+      <img src="/assets/gifts-for-history-buffs-thumb.webp" loading="lazy" width="265" height="180" alt="History Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">34</span><h2>Fun Gifts For History Buffs</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+    <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/gifts-for-mechanics/">
+      <img src="/assets/gifts-for-mechanics-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Men">
+    </div>
+    <div class="post-3-link">
+        <span class="number">19</span><h2>Awesome Gifts for Car Mechanics</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+      <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/boxing-gifts/">
+      <img src="/assets/boxing-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Beatles Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">17</span><h2>Kickass Boxing Gifts for Fighters</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+            <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="racing-gifts/">
+      <img src="/assets/racing-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Film buffs">
+    </div>
+    <div class="post-3-link">
+        <span class="number">18</span><h2>Gifts for Race Car Drivers</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+
+          <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="gifts-for-youtubers/">
+      <img src="/assets/gifts-for-youtubers-thumb.webp" loading="lazy" width="265" height="180" alt="History Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">25</span><h2>Awesome Gifts for Youtubers</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+
+    <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/gifts-for-pilots/">
+      <img src="/assets/gifts-for-pilots-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Pilots">
+    </div>
+    <div class="post-3-link">
+        <span class="number">10</span><h2>Lovalbe Gifts for Pilots</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+      <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="/yoga-teacher-gifts/">
+      <img src="/assets/yoga-teacher-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Beatles Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">10</span><h2>Awesome Gifts for Yoga Teachers</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+            <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="soccer-coach-gifts/">
+      <img src="/assets/soccer-coach-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="Gifts For Film buffs">
+    </div>
+    <div class="post-3-link">
+        <span class="number">10</span><h2>Gifts for a Soccer Coach</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+
+          <div class="post-3"> <!-- Post 3 -->
+    <div class="post-3-image">
+      <a href="police-academy-graduation-gifts/">
+      <img src="/assets/police-academy-graduation-gifts-thumb.webp" loading="lazy" width="265" height="180" alt="History Gifts">
+    </div>
+    <div class="post-3-link">
+        <span class="number">24</span><h2>Police Academy Graduation Gifts</h2>
+      </a>
+    </div> 
+  </div><!-- Post 3 End -->
+
+    <div class="break"> <!--Break -->
+  </div> <!-- Break End -->
+
+
+
+
+  
+</div> <!-- Post 3 Wrapper End --> <!-- Post 3 Wrapper End -->

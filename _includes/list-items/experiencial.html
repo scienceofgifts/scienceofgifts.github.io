@@ -1,0 +1,27 @@
+{% for item in page.experiencial limit:6 %}
+<div class="product">
+    <div class="product-image">
+    <img src="{{ item.img | prepend: '/assets/' }}.webp" loading="lazy" width="260" height="260" alt="{{ item.img-alt }}">
+    </div>
+    <div class="product-title"><h3>{{ item.headline}}</h3></div>
+    <div class="buttons">
+        <a rel="nofollow sponsored" class="shop-btn" href="{{ item.link }}{% if item.source == 'amazon' %}{% include amazon.html %}{% endif %}">{% include buy-button-text.html -%}{% if item.buy-text %}{{ item.buy-text | capitalize }}{% else %}{{ item.source | capitalize }}{% endif %}</a>
+
+<details class="dropdown">
+      <summary><strong>More Details</strong></summary>
+      <p>{{ item.description }}</p>
+    </details>
+
+<details class="dropdown">
+      <summary><strong>Why it Makes a Great Gift</strong></summary>
+      <p>{{ item.gg}}</p>
+    </details>
+  
+<details class="dropdown">
+      <summary>Ideal For</summary>
+      <p>{{ item.ideal-for}}</p>
+</details>
+
+    </div>
+</div>
+ {% endfor %}

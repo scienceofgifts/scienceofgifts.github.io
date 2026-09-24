@@ -1,0 +1,5 @@
+<div class="updated">
+    <div class="date-published">
+This post was originally published on <span itemprop="datePublished" content="{% if page.date-published-content %}{{ page.date-published-content }}{% elsif page.date-published %}{{ page.date-published }}{% else %}{{ page.date }}{% endif %}">{% if page.date-published %}{{ page.date-published | date: "%b %-d, %Y" }}{% else %}{{ page.date | date: "%b %-d, %Y" }}{% endif %}</span>
+</div>
+</div>

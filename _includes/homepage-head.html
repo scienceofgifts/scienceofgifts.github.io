@@ -1,0 +1,39 @@
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include homepage-css.html %}
+  <title>Science of Gifts - Finding Gifts Made Simple</title>
+  <link rel="stylesheet" href="{{ "/css/homepage.css" | prepend: site.baseurl }}" type="text/css">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" name="description">
+  <link rel='icon' href='/favicon.ico' type='image/x-icon'/>
+  <meta name="verification" content="00874cf9c88cdfee293b190ccb4e7db4" />
+  {% include font.html %}
+  <script language="javascript">
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+} 
+</script>
+<meta name="p:domain_verify" content="f3a81a5db5dd9febb5f56d5adba18fae"/>
+<script>
+function myScript() {
+  var x = document.getElementById("mySecondnav");
+  if (x.className === "second-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "second-nav";
+  }
+}
+</script>
+</head>
+
+<script type='application/ld+json'>
+{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.scienceofgifts.com\/","name":"Science of Gifts","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.scienceofgifts.com/search/?query={search_term_string}","query-input":"required name=search_term_string"}}
+</script>

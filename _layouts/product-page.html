@@ -1,0 +1,122 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include product-head.html %}
+  <body>
+<span itemscope itemtype="https://schema.org/Article">
+  <div class="navbar">
+        {% include product-header.html %}
+        {% include featured-top.html %}
+   </div>
+    <div class="product-wrap">
+      <span class="back-button-wrap">
+      <span class="back-button">
+      <a onclick="window.history.back()"><i class="left"></i>Back</a>
+      </span>
+      </span>
+      <div class="product-post-body">
+       <div class="product-post">
+  <header class="product-post-header">
+    <span class="product-post-image">
+       <img loading="lazy" width="400" height="400" src="/assets/products/{{ page.img }}.jpg" alt="{{ page.title }}">
+       <span class="share-icons">
+      {% include product/share.html %}  
+    </span>
+    </span>
+    <div class="post-title-box">
+       <h1 itemprop="name" class="product-post-title">{{ page.title }}</h1>
+        <div class="product-meta-wrap">
+      <p class="product-post-meta">
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+       <span itemprop="name">{% if page.author %} Added by: {{ page.author }}{% endif %}{% if page.meta %}  {{ page.meta }}{% endif %} on
+       <span itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</span>
+       </p>
+      </span>   
+   </div> 
+       {% include product/product-info.html %} 
+      </span>  
+    <span class="product-excerpt">
+      {% if page.excerpt %}{{ page.excerpt }}{% endif %}
+    </span>
+    <div class="buy-box">
+      {% if page.buy-link-amazon %}
+      <a rel="nofollow" href="{{ page.buy-link-amazon}}{% include amazon.html %}"><span class="buy-btn">{% include buy.html %}</a>
+      {% elsif page.buy-link-etsy %}
+      <a rel="nofollow" href="{{ page.buy-link-etsy }}"><span class="buy-btn">{% include buy-etsy.html %}</a>
+      {% elsif page.buy-link-zazzle %}
+      <a rel="nofollow" href="{{ page.buy-link-zazzle}}{% include zazzle.html %}"><span class="buy-btn">{% include buy-zazzle.html %}</a>
+      {% else %}
+      <a rel="nofollow" href="{{ page.buy-link}}"><span class="buy-btn">{{ page.buy-text}}</a>
+      {% endif %}
+     </span>
+      <a rel="nofollow" href="https://www.pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+            title="Save on Pinterest" >
+             <span class="pin-button">
+         <img src="/assets/icons/pin.png" alt="Pin"><span class="pin-text">Save</span>
+      </a>
+     </span>
+    </div>
+    </div>
+  </header>   
+  <span itemprop="articleBody">
+  <article class="product-post-content">
+    <div class="product-post-content-content">
+    {{ content }}
+  </article>
+  <span class="to-not-to-gift">
+    <h2 class="to-gift">ideal gift for:</h2>
+    <ul class="to-gift-list">
+      {% if page.to-gift-1 %}
+      <li class=to-gift id="to-gift-1">
+      <span class="tick">&#x2714;</span>
+         {{ page.to-gift-1}}
+      </li>
+         {% endif %}
+      {% if page.to-gift-2 %}
+      <li class=to-gift id="to-gift-2">
+      <span class="tick">&#x2714;</span>
+         {{ page.to-gift-2}}
+      </li>     
+         {% endif %}
+      {% if page.to-gift-3 %}
+      <li class=to-gift id="to-gift-3">
+      <span class="tick">&#x2714;</span>  
+         {{ page.to-gift-3}}
+      </li>   
+      {% endif %}
+    </ul>
+   <h2 class="not-to-gift">Don't Gift to:</h2>
+    <ul class="not-to-gift-list">
+      {% if page.not-to-gift-1 %}
+      <li class=not-to-gift id="not-to-gift-1">
+      <span class="cross">&#10006;</span>
+         {{ page.not-to-gift-1}}
+      </li>
+         {% endif %}
+      {% if page.not-to-gift-2 %}
+      <li class=not-to-gift id="not-to-gift-2">
+         <span class="cross">&#10006;</span>
+         {{ page.not-to-gift-2}}
+      </li>     
+         {% endif %}
+      {% if page.not-to-gift-3 %}
+      <li class=not-to-gift id="not-to-gift-3">
+         <span class="cross">&#10006;</span>
+         {{ page.not-to-gift-3}}
+      </li>   
+      {% endif %}
+    </ul>
+        
+  </span>
+  </span>
+</div>
+      </div>
+ {% include post-product.html %}
+    </div>
+    {% include product/product-footer.html %}  
+    <script src="/js/lazysizes.min.js" async></script>
+  </body>
+</html>

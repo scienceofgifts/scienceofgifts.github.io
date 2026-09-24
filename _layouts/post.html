@@ -1,18 +1,42 @@
 ---
-layout: default
+layout: compress
 ---
-
-<div class="post">
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+<span itemscope itemtype="https://schema.org/Article">
+  <div class="navbar">
+        {% include header.html %}
+</div>
+    <div class="wrap">
+      <div class="post-body">
+       <div class="post">
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
+   <div class="meta-wrap">
+      <p class="post-meta">
+      <span itemprop="dateModified">{% if page.date %}{{ page.date | date: "%b %-d, %Y" }}{% else %}{{ page.date-published | date-published: "%b %-d, %Y" }}{% endif %}</span>
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+       <span itemprop="name">{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} </p>
+      </span>  
+      {% include share.html %}  
+   </div> 
   </header>
+    <span class="post-image">
+      <img itemprop="image" src="/assets/{{ page.url | remove:'/' }}.jpg" loading="lazy" width="648" height="463" alt="{{ page.alt-text }}">
+    </span>
+  <span itemprop="articleBody">
   <article class="post-content">
     {{ content }}
   </article>
-    
+  </span>
 </div>
-
-
- {% include sidebar.html %}
  {% include post-footer.html %}
+      </div>
+    </div>
+    {% include footer.html %}  
+    <script src="/js/lazysizes.min.js" async></script>
+  </body>
+</html>
+

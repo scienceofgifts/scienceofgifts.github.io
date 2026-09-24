@@ -1,14 +1,52 @@
-<head>
+<head lang="en">
+    {% include analytics.html %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+   {% include post-css.html %}
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+   <link rel="preload" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link itemprop="url" rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-
+  <meta content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" name="description">
+  <link rel='icon' href='/favicon.ico' type='image/x-icon'/>
+ {% include font.html %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ site.url }}/assets/{{ page.url | remove:'/' }}.jpg">
+  <script language="javascript">
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+} 
+</script>
+<script language="javascript">
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+} 
+</script>
+<script>
+function myScript() {
+  var x = document.getElementById("mySecondnav");
+  if (x.className === "second-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "second-nav";
+  }
+}
+</script>
 </head>

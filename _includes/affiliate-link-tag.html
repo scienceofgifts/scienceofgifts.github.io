@@ -1,0 +1,14 @@
+{% if page.item1-buy-text == false %}
+    {% include nofollow-sponsored.html -%}
+{% else %}
+    {% include shop.html -%}
+{% endif %}
+
+
+
+
+{% if page.item1-buy-text == false %}
+    <a rel="nofollow sponsored" href="{{ page.item1-link }}{% if page.item1-source == 'amazon' %}{% include amazon.html %}{% endif %}">
+{% else %}
+    <a href="{{ page.item1-link }}{% if page.item1-source == 'amazon' %}{% include amazon.html %}{% endif %}"> 
+{% endif %}

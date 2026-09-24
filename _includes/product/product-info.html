@@ -1,0 +1,15 @@
+<div class="product-values">
+<table id="product-value-chart">
+  <tr>
+    <th class="ideal-age-title">Ideal Age</th>
+    <th class="gift-impact-quotient-title">Source</th>
+    <th class="product-price-title">Price</th>
+  </tr>
+  <tr>
+    <td class="ideal-age-value">{{ page.ideal-age }}</td>
+    <td class="gift-impact-quotient-value">{{ page.giq }}</td>
+    <td class="product-price-value">{% if page.product-price %}{{ page.product-price }}{% elsif page.check-amazon %}{% include product/amazon-price.html %}{% else %} N/A
+ {% endif %}</td>
+  </tr>
+</table>
+</div>

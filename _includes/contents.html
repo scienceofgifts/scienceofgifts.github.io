@@ -1,0 +1,62 @@
+<div class="content-box">
+    <span class="tip-star">
+        <img src="/assets/icons/contents.png" alt="*" width="30" height="30">
+    </span>
+    <h3>Contents</h3>
+</div>
+
+
+<ul class="bookmark-list">
+{% if page.bookmark1 %} <li class="bookmark" id="B1">1. <a href="{{ page.bookmark1-link }}">{{ page.bookmark1 }}</a></li>{% endif %}
+
+{% if page.bookmark2 %} <li class="bookmark" id="B2">2. <a href="{{ page.bookmark2-link }}">{{ page.bookmark2 }}</a></li>{% endif %}
+
+{% if page.bookmark3 %} <li class="bookmark" id="B3">3. <a href="{{ page.bookmark3-link }}">{{ page.bookmark3 }}</a></li>{% endif %}
+
+{% if page.bookmark4 %} <li class="bookmark" id="B4">4. <a href="{{ page.bookmark4-link }}">{{ page.bookmark4 }}</a></li>{% endif %}
+
+{% if page.bookmark5 %} <li class="bookmark" id="B5">5. <a href="{{ page.bookmark5-link }}">{{ page.bookmark5 }}</a></li>{% endif %}
+
+{% if page.bookmark6 %} <li class="bookmark" id="B6">6. <a href="{{ page.bookmark6-link }}">{{ page.bookmark6 }}</a></li>{% endif %}
+
+{% if page.bookmark7 %} <li class="bookmark" id="B7">7. <a href="{{ page.bookmark7-link }}">{{ page.bookmark7 }}</a></li>{% endif %}
+
+{% if page.bookmark8 %} <li class="bookmark" id="B8">8. <a href="{{ page.bookmark8-link }}">{{ page.bookmark8 }}</a></li>{% endif %}
+
+{% if page.bookmark9 %} <li class="bookmark" id="B9">9. <a href="{{ page.bookmark9-link }}">{{ page.bookmark9 }}</a></li>{% endif %}
+
+{% if page.bookmark10 %} <li class="bookmark" id="B10">10. <a href="{{ page.bookmark10-link }}">{{ page.bookmark10 }}</a></li>{% endif %}
+
+{% if page.bookmark11 %} <li class="bookmark" id="B11">11. <a href="{{ page.bookmark11-link }}">{{ page.bookmark11 }}</a></li>{% endif %}
+
+{% if page.bookmark12 %} <li class="bookmark" id="B12">12. <a href="{{ page.bookmark12-link }}">{{ page.bookmark12 }}</a></li>{% endif %}
+
+{% if page.bookmark13 %} <li class="bookmark" id="B13">13. <a href="{{ page.bookmark13-link }}">{{ page.bookmark13 }}</a></li>{% endif %}
+
+</ul>
+
+<style>
+    .content-box {
+    width: 100%;
+    background-color: #f9f9f9;
+    float: left;
+    border-top: none;
+    margin: 10px 0px 0px 0px;
+    border-bottom: 4px dotted #e1e1e1;
+}
+.content-box h3 {
+    float: left;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin: 10px 2px;
+    text-transform: uppercase;
+}
+.bookmark-list{float: right;width: 100%;font-size: 15px;background-color: #f9f9f9;list-style: none;margin-bottom: 15px;padding-bottom: 15px;}
+.bookmark-list ul{float: left;width: 100%;}
+.bookmark-list ul>li{float: left;margin: 2px 5px;padding: 5px;}
+.bookmark-list a{border-bottom: none;color: #1756a9;}
+.bookmark-list a:visited{color: #1756a9;}
+.bookmark{float: left;margin: 2px 10px;padding: 10px 5px 0px 5px;}
+
+</style>

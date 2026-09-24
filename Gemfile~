@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'jekyll-sitemap'
+gem 'jekyll-paginate-v2'
+gem 'jekyll-webp'
+gem 'wdm'
+gem "tzinfo"
+gem "tzinfo-data"
+
+
