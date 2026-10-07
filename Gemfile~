@@ -6,5 +6,5 @@ gem 'jekyll-webp'
 gem 'wdm'
 gem "tzinfo"
 gem "tzinfo-data"
-
+gem "csv"
 
