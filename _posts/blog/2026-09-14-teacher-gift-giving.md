@@ -25,8 +25,7 @@ faq-schema: false
 faq-number: 3   
 
 
-source1: “Teigen, K. H., Olsen, M. V. G., & Solås, O. E. (2005). Giver-receiver asymmetries in gift preferences. British Journal of Social Psychology, 44(1), 125-144. https://doi.org/10.1348/014466604X23428”
-
+source1: "Teigen, K. H., Olsen, M. V. G., & Solås, O. E. (2005). [Giver-receiver asymmetries in gift preferences](https://doi.org/10.1348/014466604X23428). British Journal of Social Psychology, 44(1), 125-144. https://doi.org/10.1348/014466604X23428"
 
 chart-1: false
 chart-2: false
