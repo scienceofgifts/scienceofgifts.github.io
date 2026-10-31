@@ -1,0 +1,282 @@
+<style>
+  /* 1. Global Override to stop your site from underlining the cards on hover */
+  .sog-shop-showcase a, 
+  .sog-shop-showcase a:hover,
+  .sog-shop-showcase a *,
+  .sog-shop-showcase a:hover * {
+    text-decoration: none !important;
+  }
+
+  /* 2. Light Theme Layout */
+  .sog-shop-showcase {
+    margin: 3.5rem 0;
+    padding: 3rem 1.75rem;
+    background: #ffffff; /* Blends into your white site */
+    color: #111111;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Soft gray border instead of gold/black */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03); /* Very subtle depth */
+    font-family: inherit;
+    float:left;
+  }
+  .sog-shop-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .sog-shop-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .sog-shop-kicker {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #111111;
+    background: #f4f4f4; /* Subtle gray pill */
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.65rem;
+  }
+  .sog-shop-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.2;
+  }
+  .sog-shop-sub {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #555555;
+    max-width: 650px;
+    line-height: 1.55;
+  }
+  .sog-shop-main-btn {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0.7rem 1.25rem;
+    background: #111111;
+    color: #ffffff !important;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+  }
+  .sog-shop-main-btn:hover {
+    opacity: 0.85;
+  }
+  
+  /* 3. The Cards */
+  .sog-shop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .sog-shop-card {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #111111 !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .sog-shop-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4af37;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+    background: #ffffff;
+  }
+  .sog-shop-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    background: #eaeaea;
+    overflow: hidden;
+  }
+  .sog-shop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .sog-shop-card:hover .sog-shop-img {
+    transform: scale(1.04);
+  }
+  .sog-shop-badge {
+    position: absolute;
+    top: 0.65rem;
+    left: 0.65rem;
+    background: #ffffff;
+    color: #111111;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.22rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .sog-shop-card-body {
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .sog-shop-card-title {
+    margin: 0 0 0.45rem 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.3;
+  }
+  .sog-shop-card-desc {
+    margin: 0 0 1rem 0;
+    font-size: 0.86rem;
+    color: #555555;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+  .sog-shop-card-cta {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #333; /* Darker gold for white background contrast */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  
+  /* 4. Bottom Pills */
+  .sog-shop-pills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .sog-shop-pills-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #777777;
+    margin-right: 0.25rem;
+  }
+  .sog-shop-pill {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333333 !important;
+    background: #f4f4f4;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .sog-shop-pill:hover {
+    background: #111111;
+    color: #ffffff !important;
+    border-color: #111111;
+  }
+
+  /* Responsive Rules */
+  @media (max-width: 960px) {
+    .sog-shop-grid { grid-template-columns: repeat(2, 1fr); }
+    .sog-shop-header { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 560px) {
+    .sog-shop-showcase { padding: 2rem 1.15rem; margin: 2.5rem 0; }
+    .sog-shop-grid { grid-template-columns: 1fr; }
+    .sog-shop-title { font-size: 1.5rem; }
+  }
+</style>
+
+<section class="sog-shop-showcase" aria-label="Official Science of Gifts Shop & Gift Guides">
+  <div class="sog-shop-inner">
+    <div class="sog-shop-header">
+      <div>
+        <span class="sog-shop-kicker">Official Storefront • Original Designs</span>
+        <h2 class="sog-shop-title">Shop Our Curated Gift Guides</h2>
+        <p class="sog-shop-sub">
+          Skip the generic novelty aisle. Explore heavyweight apparel, etched glassware, archival journals, and study prints designed in-house for history buffs, mythology lovers, and pop-culture fans.
+        </p>
+      </div>
+      <a href="https://shop.scienceofgifts.com" class="sog-shop-main-btn">Visit Full Shop →</a>
+    </div>
+
+    <div class="sog-shop-grid">
+      <!-- Card 1: History Buffs Guide -->
+      <a href="https://shop.scienceofgifts.com/pages/history-gifts" class="sog-shop-card">
+        <div class="sog-shop-img-wrap">
+          <img src="/assets/history-gifts-gallery.webp" alt="Gifts for History Buffs and History Lovers" class="sog-shop-img" loading="lazy" width="327" height="220" />
+          <span class="sog-shop-badge">50+ Original Picks</span>
+        </div>
+        <div class="sog-shop-card-body">
+          <h3 class="sog-shop-card-title">Gifts for History Buffs</h3>
+          <p class="sog-shop-card-desc">Cicero Latin whiskey glasses, 1652 Penny University mugs, primary source tees, and museum-grade timelines.</p>
+          <span class="sog-shop-card-cta"><span>Explore History Gifts</span><span>→</span></span>
+        </div>
+      </a>
+
+      <!-- Card 2: Greek Mythology Guide -->
+      <a href="https://shop.scienceofgifts.com/pages/greek-mythology-gifts" class="sog-shop-card">
+        <div class="sog-shop-img-wrap">
+          <img src="/assets/greek-god-gifts-gallery.webp" alt="Greek Mythology Gifts and Greek God Merch" class="sog-shop-img" loading="lazy" width="327" height="220" />
+          <span class="sog-shop-badge">25+ Olympian Picks</span>
+        </div>
+        <div class="sog-shop-card-body">
+          <h3 class="sog-shop-card-title">Greek Mythology Gifts</h3>
+          <p class="sog-shop-card-desc">Subtle classical designs for fans of Hades, Athena, Poseidon, and Zeus—from Charon's Ferry crewnecks to owl glassware.</p>
+          <span class="sog-shop-card-cta"><span>Explore Greek God Gifts</span><span>→</span></span>
+        </div>
+      </a>
+
+      <!-- Card 3: Civil War Guide -->
+      <a href="https://shop.scienceofgifts.com/pages/civil-war-gifts" class="sog-shop-card">
+        <div class="sog-shop-img-wrap">
+          <img src="/assets/american-civil-war-gifts-gallery.webp" alt="American Civil War Gifts and 1861-1865 Apparel" class="sog-shop-img" loading="lazy" width="327" height="220" />
+          <span class="sog-shop-badge">1861–1865 Archive</span>
+        </div>
+        <div class="sog-shop-card-body">
+          <h3 class="sog-shop-card-title">American Civil War Gifts</h3>
+          <p class="sog-shop-card-desc">Archival 1861–1865 hoodies, field ration mugs, Emancipation prints, and nineteenth-century military history gear.</p>
+          <span class="sog-shop-card-cta"><span>Explore Civil War Gifts</span><span>→</span></span>
+        </div>
+      </a>
+
+      <!-- Card 4: HIMYM / Pop Culture Guide -->
+      <a href="https://shop.scienceofgifts.com/pages/himym-gifts" class="sog-shop-card">
+        <div class="sog-shop-img-wrap">
+          <img src="/assets/how-i-met-your-mother-gifts-gallery.webp" alt="How I Met Your Mother Gifts and Merchandise" class="sog-shop-img" loading="lazy" width="327" height="220" />
+          <span class="sog-shop-badge">Fan Favorites</span>
+        </div>
+        <div class="sog-shop-card-body">
+          <h3 class="sog-shop-card-title">HIMYM &amp; TV Lore Gifts</h3>
+          <p class="sog-shop-card-desc">Insider references, Suit Up sweaters, and subtle lore pieces built for fans who know every running joke by heart.</p>
+          <span class="sog-shop-card-cta"><span>Explore HIMYM Gifts</span><span>→</span></span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Secondary Spoke Guide Links for Extra Crawl Depth -->
+    <div class="sog-shop-pills">
+      <span class="sog-shop-pills-label">More Shop Guides:</span>
+      <a href="https://shop.scienceofgifts.com/pages/dinosaur-gifts" class="sog-shop-pill">🦖 Dinosaur Gifts</a>
+      <a href="https://shop.scienceofgifts.com/pages/wwii-gifts" class="sog-shop-pill">✈️ WWII History Gifts</a>
+      <a href="https://shop.scienceofgifts.com/pages/abraham-lincoln-gifts" class="sog-shop-pill">🎩 Abraham Lincoln Gifts</a>
+      <a href="https://shop.scienceofgifts.com/pages/history-teacher-gifts" class="sog-shop-pill">🍎 History Teacher Gifts</a>
+      <a href="https://shop.scienceofgifts.com/pages/gift-guides" class="sog-shop-pill">📚 All Shop Gift Guides →</a>
+    </div>
+  </div>
+</section>

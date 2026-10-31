@@ -1,35 +1,264 @@
-
 <footer>
-    <div class="footer-text">
-        <span>Discover unique gifts and exclusive designs in our shops:</span>
-    </div>
+  <div class="sog-footer-inner">
     
-    <div class="footer-links">
+    <!-- 1. PRIMARY: OFFICIAL FOURTHWALL STORE & PILLAR GUIDES (DOFOLLOW SEO EQUITY) -->
+    <div class="sog-footer-primary">
+      <span class="sog-footer-eyebrow">Official Storefront</span>
+      <h3 class="sog-footer-heading">Discover Original Designs in the Science of Gifts Shop</h3>
+      <p class="sog-footer-sub">
+        Heavyweight apparel, etched glassware, archival journals, and museum-grade prints designed in-house.
+      </p>
+      
+      <a href="https://shop.scienceofgifts.com" class="sog-footer-shop-btn">
+        Visit Official Shop →
+      </a>
+
+      <nav class="sog-footer-guides" aria-label="Official Shop Gift Guides">
+        <a href="https://shop.scienceofgifts.com/pages/history-gifts" class="sog-footer-pill">Gifts for History Buffs</a>
+        <a href="https://shop.scienceofgifts.com/pages/greek-mythology-gifts" class="sog-footer-pill">Greek Mythology Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/civil-war-gifts" class="sog-footer-pill">American Civil War Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/wwii-gifts" class="sog-footer-pill">WWII History Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/abraham-lincoln-gifts" class="sog-footer-pill">Abraham Lincoln Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/history-teacher-gifts" class="sog-footer-pill">History Teacher Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/dinosaur-gifts" class="sog-footer-pill">Dinosaur Gifts</a>
+        <a href="https://shop.scienceofgifts.com/pages/himym-gifts" class="sog-footer-pill">HIMYM Gifts</a>
+      </nav>
+    </div>
+
+    <!-- 2. SECONDARY: EXTERNAL MARKETPLACES (NOFOLLOW KEPT INTACT) -->
+    <div class="sog-footer-marketplaces">
+      <div class="footer-text">
+        <span>Also available on our partner marketplaces:</span>
+      </div>
+      
+      <div class="footer-links">
         <a rel="nofollow" href="https://www.zazzle.com/store/scienceofgifts" target="_blank">
-            <img src="/assets/icons/zazzle-logo.png" alt="Zazzle Logo">
+          <img src="/assets/icons/zazzle-logo.png" alt="Zazzle Logo" loading="lazy">
         </a>
         <a rel="nofollow" href="https://www.redbubble.com/people/dattaraj/shop?asc=u" target="_blank">
-            <img src="/assets/icons/redbubble-logo.png" alt="Redbubble Logo">
+          <img src="/assets/icons/redbubble-logo.png" alt="Redbubble Logo" loading="lazy">
         </a>
         <a rel="nofollow" href="https://science-of-gifts.creator-spring.com/" target="_blank">
-            <img src="/assets/icons/spring-logo.png" alt="Teespring Logo">
+          <img src="/assets/icons/spring-logo.png" alt="Teespring Logo" loading="lazy">
         </a>
+      </div>
     </div>
-    
+
+    <!-- 3. LEGAL & COPYRIGHT -->
     <div class="footer-legal">
-        <a href="/privacy-policy/">Privacy Policy</a> | 
-        <a href="/sitemap/">Sitemap</a> | 
-        <a href="/affiliate-disclosure/">Affiliate Disclosure</a> | 
-        <a href="/about/">About</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <span class="sog-footer-sep">|</span>
+      <a href="/sitemap/">Sitemap</a>
+      <span class="sog-footer-sep">|</span>
+      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <span class="sog-footer-sep">|</span>
+      <a href="/about/">About</a>
+      <span class="sog-footer-sep">|</span>
+      <a href="/contact/">Contact</a>
     </div>
 
     <div class="footer-copyright">
-        <span>&copy; 2026 Science of Gifts. All Rights Reserved.</span>
+      <span>&copy; 2026 Science of Gifts. All Rights Reserved.</span>
     </div>
+
+  </div>
 </footer>
-
-
 <style>
+  /* Global underline override inside footer */
+  footer a,
+  footer a:hover {
+    text-decoration: none !important;
+  }
 
+  footer {
+    box-sizing: border-box; /* Fixes the mobile width blowout */
+    width: 100%;
+    max-width: 100vw; /* Hard cap at screen width */
+    overflow-x: hidden; /* Safety net against horizontal scrolling */
+    margin-top: 4rem;
+    padding: 3.25rem 1.5rem 2.25rem 1.5rem;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    color: #111111;
+    text-align: center;
+    font-family: inherit;
+  }
 
+  .sog-footer-inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* 1. Official Storefront Block */
+  .sog-footer-primary {
+    box-sizing: border-box;
+    padding-bottom: 2.25rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sog-footer-eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #111111;
+    background: #eaeaea;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    margin-bottom: 0.65rem;
+  }
+
+  .sog-footer-heading {
+    margin: 0 0 0.45rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .sog-footer-sub {
+    box-sizing: border-box;
+    margin: 0 auto 1.25rem auto;
+    width: 100%;
+    max-width: 560px;
+    font-size: 0.92rem;
+    color: #555555;
+    line-height: 1.55;
+  }
+
+  .sog-footer-shop-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.65rem 1.35rem;
+    background: #111111;
+    color: #ffffff !important;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+
+  .sog-footer-shop-btn:hover {
+    opacity: 0.86;
+    transform: translateY(-1px);
+  }
+
+  .sog-footer-guides {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .sog-footer-pill {
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333333 !important;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .sog-footer-pill:hover {
+    background: #111111;
+    color: #ffffff !important;
+    border-color: #111111;
+  }
+
+  /* 2. Secondary Marketplaces */
+  .sog-footer-marketplaces {
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+
+  .footer-text {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #666666;
+    margin-bottom: 0.85rem;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    opacity: 1;
+  }
+
+  .footer-links img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+
+  /* 3. Legal & Copyright */
+  .footer-legal {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 0.65rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .footer-legal a {
+    color: #444444 !important;
+    font-weight: 500;
+    padding: 0 0.25rem;
+    transition: color 0.15s ease;
+  }
+
+  .footer-legal a:hover {
+    color: #b38f22 !important;
+  }
+
+  .sog-footer-sep {
+    color: #cccccc;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+    color: #888888;
+  }
+
+  @media (max-width: 560px) {
+    footer {
+      padding: 2.5rem 1rem 1.75rem 1rem;
+    }
+    .sog-footer-heading {
+      font-size: 1.2rem;
+    }
+    .sog-footer-guides {
+      gap: 0.4rem;
+    }
+    .sog-footer-pill {
+      font-size: 0.76rem;
+      padding: 0.3rem 0.65rem;
+    }
+  }
 </style>
