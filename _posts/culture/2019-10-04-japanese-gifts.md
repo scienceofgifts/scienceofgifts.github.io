@@ -255,7 +255,7 @@ If your recipient drinks tea, you can gift them this tea set as a gesture of wis
 
 The hectic nature of modern life can often be stressful. You have to make sure you give your mind some rest and let it relax so that it can function well. Mindful meditation has been proven effective in relieving stress and is used by millions of people all over the world. 
 
-A buddha board is a tool that allows you to focus on a soothing task and be mindful about it. It works similar to [Japanese Sumi](https://www.britannica.com/art/suiboku-ga 'Suiboku: Japanese Painting Style - Britannica') painting. Give this to a person you care for. 
+A buddha board is a tool that allows you to focus on a soothing task and be mindful about it. It works similar to Japanese Sumi painting. Give this to a person you care for. 
 
 
 <!-- item -->
@@ -400,7 +400,7 @@ Now, people like to listen to the book while driving. So for those busy recipien
 {% include items/item17.html %}
 <!-- item -->
 
-Is your intended recipient a scribbler who has a habit of writing down their thoughts? Writers love variety in notebooks. It’s the same as how [filmmakers](/filmmaker-gifts/ 'Gifts for Filmmakers') are obsessed with trying out different cameras. 
+Is your intended recipient a scribbler who has a habit of writing down their thoughts? Writers love variety in notebooks. It’s the same as how [filmmakers](https://shop.scienceofgifts.com/pages/gifts-for-filmmakers 'Gifts for Filmmakers') are obsessed with trying out different cameras. 
 
 This Japan cover journal is a good [gift for writers](/gifts-for-aspiring-writers/ 'Gifts for Writers') or anyone who prefers writing down their ideas on paper. It’s easy to carry and fits naturally into daily routines. The design gives it a bit more character than a plain notebook, while still keeping it practical. Functional and visually appealing, it’s something they can use regularly without overthinking it. 
 
